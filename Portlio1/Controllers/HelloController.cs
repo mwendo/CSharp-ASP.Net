@@ -11,17 +11,23 @@ namespace Portfolio1.Controllers
             return View();
         }
 
-        [HttpGet("/projects")]
+        [HttpGet("projects")]
 
-        public string Projects()
+        public ViewResult Projects()
         {
-            return "These are my projects";
+            return View("Projects");
         }
 
-        [HttpGet("/contact")]
-        public string Contact()
+        [HttpGet("contact")]
+        public ViewResult Contact()
         {
-            return "This is my Contact!";
+            return View("Contact");
+        }
+
+        [HttpPost("handleData")]
+        public RedirectToActionResult Submit()
+        {
+            return RedirectToAction("Index");
         }
     }
 }

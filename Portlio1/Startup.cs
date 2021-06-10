@@ -29,6 +29,8 @@ namespace Portlio1
             
             app.UseMvc();
 
+            app.UseStaticFiles();
+
             // app.UseRouting();
 
             // app.UseEndpoints(endpoints =>

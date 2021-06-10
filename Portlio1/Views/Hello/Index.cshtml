@@ -5,19 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
+    <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
-    <h1>Hello world from your first cshtml file!</h1>
-    @{
-        List<string> myList = new List<string>{
-            "Hello",
-            "World",
-            "Pizza"
-            };
-        foreach(string word in myList)
-        {
-            <p>@word</p>
-        }
-    }
+    <div class="container">
+        <div class="nav">
+            <div class="navItems">
+                <h3> <a href="/">Home</a> </h3>
+                <h3>|</h3>
+                <h3>  <a href="/projects">Projects</a> </h3>
+                <h3>|</h3>
+                <h3>  <a href="/contact">Contact</a> </h3>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="middle">
+                <h1>About Me</h1>
+            </div>
+
+            <div class="end">
+                <div class="imageSide">
+                    <img src="#" alt="#">
+                    <h1>Micah Wendorf</h1>
+                    <h4>I love coding!!!!!!!!!!!</h4>
+                </div>
+                <div class="loremSide">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis architecto neque placeat voluptates facere. Ex at ab unde doloremque iusto, vel minus in accusantium nemo asperiores omnis quae quam rem similique deserunt nobis perferendis placeat hic? Quos fugit, enim soluta rerum odit facilis nam possimus repellendus, animi expedita, rem debitis veniam voluptatem illo perspiciatis praesentium sequi minus. Eum culpa nostrum, praesentium eaque cupiditate aliquid cumque voluptatum nulla assumenda maiores doloribus id dolorem asperiores ea incidunt ducimus eveniet accusamus perspiciatis! Totam vel atque quasi, dolore error suscipit consectetur illum alias accusamus beatae dicta molestias, rerum magnam magni. Ipsum iste excepturi quam?</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

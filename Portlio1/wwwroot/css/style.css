@@ -1,0 +1,75 @@
+.container {
+    background-color:mediumspringgreen;
+    height: 2000px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    background-color: aqua;
+}
+
+.navItems {
+    background-color: yellow;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.end {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.imageSide {
+    background-color: coral;
+    width: 50%;
+    height: 50%;
+}
+
+.loremSide {
+    background-color: greenyellow;
+    width: 50%;
+    height: 50%;
+}
+
+.imageSide img {
+    border: 2px dotted black;
+    height: 100px;
+    width: 100px;
+}
+
+.listOfProjects {
+
+    border: 2px dashed black;
+    height: 800px;
+    width: 400px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.rightSide textarea {
+    margin-top: 50px;
+}

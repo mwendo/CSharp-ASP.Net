@@ -29,3 +29,5 @@ C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.
 C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.1\Portlio1.RazorTargetAssemblyInfo.cs
 C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.1\Portlio1.Views.pdb
 C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.1\Portlio1.csproj.CopyComplete
+C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.1\Razor\Views\Hello\Projects.cshtml.g.cs
+C:\Users\wendo\Desktop\CodingDojo\CSharp\ASP.NET\Portlio1\obj\Debug\netcoreapp3.1\Razor\Views\Hello\Contact.cshtml.g.cs
