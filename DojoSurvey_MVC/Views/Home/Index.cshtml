@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model DojoStudent
+
+    <div class="container">
+        <form asp-action="Submit" asp-controller="Home" method="post">
+            <div class="name">
+                <span asp-validation-for="Name"></span>
+                <label>Your Name: </label>
+                <input asp-for="Name">
+            </div>
+            <div class="location">
+                <span asp-validation-for="Location"></span>
+                <label>Dojo Location: </label>
+                <select asp-for="Location" id="">
+                    <option value=""></option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="New York City">New York City</option>
+                    <option value="Seattle">Seattle</option>
+                </select>
+            </div>
+            <div class="language">
+                <span asp-validation-for="Language"></span>
+                <label>Favorite Language: </label>
+                <select asp-for="Language" id="">
+                    <option value=""></option>
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Java">Java</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div class="comment">
+                <div class="">
+                    <span asp-validation-for="Comment"></span>
+                    <label>Comment (optional):</label>
+                </div>
+                <textarea asp-for="Comment" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>

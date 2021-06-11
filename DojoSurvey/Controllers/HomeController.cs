@@ -1,6 +1,13 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using DojoSurvey.Models;
+
+
 namespace DojoSurvey
 {
     public class HomeController : Controller
@@ -12,9 +19,14 @@ namespace DojoSurvey
         }
 
         [HttpPost("sendData")]
-        public IActionResult Form(DojoStudent student)
+        public IActionResult Submit(DojoStudent student)
         {
-            return View("Results", student);
+            if(ModelState.IsValid)
+            {
+                return View("Results");
+            } else {
+                return View("Index");
+            }
         }
     }
 }

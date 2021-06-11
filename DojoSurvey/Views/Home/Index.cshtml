@@ -1,5 +1,8 @@
+@model DojoSurvey.Models.DojoStudent
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +10,20 @@
     <title>Index</title>
     <link rel="stylesheet" href="~/css/style.css">
 </head>
+
 <body>
     <div class="container">
-        <form action="sendData" method="post">
+        <form asp-action="Submit" asp-controller="Home" method="post">
             <div class="name">
+                <span asp-validation-for="Name"></span>
                 <label>Your Name: </label>
-                <input type="text" name="Name">
+                <input asp-for="Name">
             </div>
             <div class="location">
+                <span asp-validation-for="Location"></span>
                 <label>Dojo Location: </label>
-                <select name="Location" id="">
+                <select asp-for="Location" id="">
+                    <option value=""></option>
                     <option value="Chicago">Chicago</option>
                     <option value="Dallas">Dallas</option>
                     <option value="New York City">New York City</option>
@@ -24,8 +31,10 @@
                 </select>
             </div>
             <div class="language">
+                <span asp-validation-for="Language"></span>
                 <label>Favorite Language: </label>
-                <select name="Language" id="">
+                <select asp-for="Language" id="">
+                    <option value=""></option>
                     <option value="Python">Python</option>
                     <option value="Javascript">Javascript</option>
                     <option value="Java">Java</option>
@@ -34,12 +43,14 @@
             </div>
             <div class="comment">
                 <div class="">
+                    <span asp-validation-for="Comment"></span>
                     <label>Comment (optional):</label>
                 </div>
-                <textarea name="Comment" id="" cols="30" rows="10"></textarea>
+                <textarea asp-for="Comment" id="" cols="30" rows="10"></textarea>
             </div>
             <button type="submit">Submit</button>
         </form>
     </div>
 </body>
+
 </html>
