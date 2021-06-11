@@ -1,6 +1,6 @@
-@model List<string>
+@model List<User>
 <h2>Here are some users!</h2>
-@foreach(string person in Model)
+@foreach(User person in Model)
 {
-    <p>@person</p>
+    <p>@person.FirstName, @person.LastName</p>
 }

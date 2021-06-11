@@ -66,24 +66,21 @@ namespace ViewModelFun.Controllers
         [HttpGet("users")]
         public IActionResult Users()
         {
-            List<string> users = new List<string>();
-            users.Add("Moose Phillips");
-            users.Add("Sarah");
-            users.Add("Jerry");
-            users.Add("Rene Ricky");
-            users.Add("Barbarah");
+            List<User> users = new List<User>();
+            users.Add(new User(){FirstName = "Moose", LastName = "Phillips"});
+            users.Add(new User(){FirstName = "Sarah"});
+            users.Add(new User(){FirstName = "Jerry"});
+            users.Add(new User(){FirstName = "Rene", LastName = "Ricky"});
+            users.Add(new User(){FirstName = "Barbarah"});
 
             return View(users);
         }
 
         [HttpGet("user")]
-        public IActionResult User()
+        public IActionResult OneUser()
         {
-            string[] user = new string[]
-            {
-                "Moose Phillips"
-            };
-            return View(user);
+            User user = new User(){FirstName = "Moose", LastName = "Phillips"};
+            return View("User", user);
         }
     }
 }
