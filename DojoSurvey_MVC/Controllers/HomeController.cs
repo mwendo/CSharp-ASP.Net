@@ -39,7 +39,7 @@ namespace DojoSurvey_MVC.Controllers
         {
             if(ModelState.IsValid)
             {
-                return RedirectToAction("Results");
+                return View("Results", student);
             } 
             else 
             {
@@ -48,7 +48,7 @@ namespace DojoSurvey_MVC.Controllers
         }
 
         [HttpGet("Results")]
-        public IActionResult Results()
+        public IActionResult Results(DojoStudent student)
         {
             return View("Results");
         }
