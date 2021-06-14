@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IndexViewModel
+
+<div class="form-container">
+    <div class="register">
+        <h1>Register</h1>
+        <form action="/create/user" method="post">
+            <div class="form-group">
+                <label>First Name</label>
+                <input asp-for="NewUser.FirstName">
+                <span asp-validation-for="NewUser.FirstName"></span>
+            </div>
+            <div class="form-group">
+                <label >Last Name</label>
+                <input asp-for="NewUser.LastName">
+                <span asp-validation-for="NewUser.LastName"></span>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input asp-for="NewUser.Password" type="password">
+                <span asp-validation-for="NewUser.Password"></span>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input asp-for="NewUser.ConfirmPassword" type="password">
+                <span asp-validation-for="NewUser.ConfirmPassword"></span>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" asp-for="NewUser.Email">
+                <span asp-validation-for="NewUser.Email"></span>
+            </div>
+            <button class="btn btn-warning">Sign up</button>
+        </form>
+    </div>
+
+    <div class="login">
+        <h1>Login</h1>
+        <form action="/login/user" method="post">
+            <div class="form-group">
+                <label >Email</label>
+                <input asp-for="CurrentUser.Email" type="email">
+                <span asp-validation-for="CurrentUser.Email"></span>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input asp-for="CurrentUser.Password" type="password">
+                <span asp-validation-for="CurrentUser.Password"></span>
+            </div>
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>
